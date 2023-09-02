@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Post",
+      "published_at": "2023-08-22T12:00:00Z",
+      "average_note": 4.5,
+      "views": 100
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "published_at": "2023-08-20T14:30:00Z",
+      "average_note": 3.8,
+      "views": 75
+    },
+    {
+      "id": 3,
+      "title": "Third Post",
+      "published_at": "2023-08-18T09:15:00Z",
+      "average_note": 4.2,
+      "views": 120
+    },
+    {
+      "id": 4,
+      "title": "Fourth Post",
+      "published_at": "2023-08-15T16:45:00Z",
+      "average_note": 4.0,
+      "views": 90
+    },
+    {
+      "id": 5,
+      "title": "Fifth Post",
+      "published_at": "2023-08-10T11:30:00Z",
+      "average_note": 4.7,
+      "views": 150
+    }
+  ]
+}
