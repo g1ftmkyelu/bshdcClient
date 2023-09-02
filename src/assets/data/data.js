@@ -56,7 +56,6 @@ export const TeamMembersData = [
     email: 'john@example.com',
     description: "John is the Head of Outreach. He excels in building strong partnerships with local communities,agencies, and businesses to further the organization."
   },
-  
   {
     image: 'https://randomuser.me/api/portraits/women/34.jpg',
     name: 'Jane Smith',
@@ -65,7 +64,30 @@ export const TeamMembersData = [
     email: 'jane@example.com',
     description: "Jane is the visionary leader of the organization. With a background in technology and innovation, she guides the team towards achieving the company's strategic goals."
   },
-
+  {
+    image: 'https://randomuser.me/api/portraits/men/22.jpg',
+    name: 'Michael Johnson',
+    role: 'CTO',
+    phoneNumber: '+9876543210',
+    email: 'michael@example.com',
+    description: "Michael oversees the technical direction of the company. His expertise in software development and architecture drives the innovation and quality of the products."
+  },
+  {
+    image: 'https://randomuser.me/api/portraits/women/56.jpg',
+    name: 'Emily Williams',
+    role: 'Marketing Director',
+    phoneNumber: '+5551234567',
+    email: 'emily@example.com',
+    description: "Emily leads the marketing efforts with creativity and passion. Her strategic thinking and consumer insights contribute to our brand's growth and customer engagement."
+  },
+  {
+    image: 'https://randomuser.me/api/portraits/women/57.jpg',
+    name: 'Emily Williams',
+    role: 'Marketing Director',
+    phoneNumber: '+5551234567',
+    email: 'emily@example.com',
+    description: "Emily leads the marketing efforts with creativity and passion. Her strategic thinking and consumer insights contribute to our brand's growth and customer engagement."
+  }
 ];
 
 
