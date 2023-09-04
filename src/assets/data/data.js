@@ -22,6 +22,7 @@ export const WebContactDetails = {
 
 export const WebsiteNavigationLinks = [
   { Caption: 'Home', url: '/' },
+  {Caption:'Events', url: '/events' },
   { Caption: 'History', url: '/history' },
   { Caption: 'Contact Us', url: '/contact' },
   { Caption: 'About', url: '/about' },

@@ -1,7 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
-
+const sanitizeHTML = (html) => {
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    return temp.textContent || temp.innerText;
+};
 const heading ="Our Core Values"
 function CoreValuesSection({values}) {
     return (
@@ -15,12 +19,12 @@ function CoreValuesSection({values}) {
 
                         <Col lg={4} md={6} sm={12} className="d-flex justify-content-center align-items-center mt-4">
                             <div className="text-center mx-3">
-                                <h3 className="text-primary"><Icon/></h3>
-                                <h3 className="text-justify aos-init aos-animate">
+                                <h3 className="text-primary"><Image src={Icon} width={100} height={100} /></h3>
+                                <h3 className="text-justify text-primary aos-init aos-animate">
                                     {Title}
                                 </h3>
                                 <p>{SubTitle}</p>
-                                <p className="text-justify">{Description}</p>
+                                <p className="text-justify">{sanitizeHTML(Description)}</p>
                             </div>
                         </Col>
                     ))}

@@ -8,6 +8,7 @@ import PaymentSuccess from "./PaymentSuccess";
 import PaymentCancel from "./PaymentCancel";
 import Partners from "./partners";
 import Team from "./Team"
+import Events from "./events";
 
 
 export{
@@ -20,5 +21,6 @@ export{
     PaymentSuccess,
     PaymentCancel,
     Partners,
-    Team
+    Team,
+    Events
 }

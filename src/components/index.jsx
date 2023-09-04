@@ -10,6 +10,7 @@ import NavBar from "./NavBar";
 import PartnerCard from "./PartnerCard";
 import TeamMemberCard from "./TeamMemberCard";
 import CoreValuesCrud from "./coreValuesCrud";
+import EventCard from "./eventCard";
 
 // Export statements
 export {
@@ -23,5 +24,6 @@ export {
   NavBar,
   PartnerCard,
   TeamMemberCard,
-  CoreValuesCrud
+  CoreValuesCrud,
+  EventCard
 };

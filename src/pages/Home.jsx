@@ -5,21 +5,27 @@ import {
     GridPagination,
     HeroSection,
     TeamMemberCard,
-    PartnerCard
+    PartnerCard,
+    EventCard
 } from '../components';
 import { useFetchAllTeamMembers } from '../hooks/teamMembersAPI';
+import { HomePageHeroSectionData } from '../assets/data/data';
 import { useFetchAllPartners } from '../hooks/partnersAPI';
-import { CoreValuesData, HomePageHeroSectionData } from '../assets/data/data';
+import { useFetchAllCoreValues } from '../hooks/coreValuesAPI';
+import { useFetchAllEvents } from '../hooks/eventsAPI';
 import { Container, Spinner } from 'react-bootstrap';
 
 const Home = () => {
     const { ButtonCaption, Caption, ButtonUrl, HeroImage } = HomePageHeroSectionData
     const { data: teamMembersData, isLoading: isLoadingTeamMembers } = useFetchAllTeamMembers();
     const { data: partnersData, isLoading: isLoadingParteners } = useFetchAllPartners();
+    const { data: coreValuesData, isLoading: isLoadingCoreValues } = useFetchAllCoreValues();
+    const { data: eventsData, isLoading: isLoadingEvents } = useFetchAllEvents();
+
     return (
         <>
 
-            {isLoadingParteners || isLoadingTeamMembers ? <div style={{width:'100vw', height:'100vh', display:'flex', justifyContent:'center', alignItems:'center'}}><Spinner animation="border" variant="primary" /> </div> :
+            {isLoadingParteners || isLoadingTeamMembers || isLoadingCoreValues || isLoadingEvents ? <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Spinner animation="border" variant="primary" /> </div> :
 
                 <>
                     <HeroSection
@@ -32,7 +38,7 @@ const Home = () => {
                         HeroImageIsVisible
                     />
                     <CoreValuesSection
-                        values={CoreValuesData}
+                        values={coreValuesData}
                     />
                     <Container>
 
@@ -60,6 +66,15 @@ const Home = () => {
 
                         />
 
+                    </Container>
+
+                    <Container>
+
+                        <ComponentSlider
+                            items={eventsData}
+                            title={'Our Events'}
+                            renderItem={(item) => <EventCard event={item}/>}
+                        />
                     </Container>
                 </>
             }
