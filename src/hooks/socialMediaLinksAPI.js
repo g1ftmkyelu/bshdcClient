@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/social-media-links';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/social-media-links';
 
 // Fetch all social media links
 export const useFetchAllSocialMediaLinks = () => {
-  return useQuery('socialMediaLinks', async () => {
+  return useQuery(['socialMediaLinks'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });

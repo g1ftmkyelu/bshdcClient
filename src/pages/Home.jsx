@@ -7,52 +7,65 @@ import {
     TeamMemberCard,
     PartnerCard
 } from '../components';
-import { CoreValuesData, HomePageHeroSectionData, PartnersData, TeamMembersData } from '../assets/data/data';
-import { Container } from 'react-bootstrap';
+import { useFetchAllTeamMembers } from '../hooks/teamMembersAPI';
+import { useFetchAllPartners } from '../hooks/partnersAPI';
+import { CoreValuesData, HomePageHeroSectionData } from '../assets/data/data';
+import { Container, Spinner } from 'react-bootstrap';
 
 const Home = () => {
     const { ButtonCaption, Caption, ButtonUrl, HeroImage } = HomePageHeroSectionData
+    const { data: teamMembersData, isLoading: isLoadingTeamMembers } = useFetchAllTeamMembers();
+    const { data: partnersData, isLoading: isLoadingParteners } = useFetchAllPartners();
     return (
         <>
-            <HeroSection
-                ButtonCaption={ButtonCaption}
-                ButtonIsVisible
-                ButtonUrl={ButtonUrl}
-                Caption={Caption}
-                HeroImage={HeroImage}
 
-                HeroImageIsVisible
-            />
-            <CoreValuesSection
-                values={CoreValuesData}
-            />
-            <Container>
+            {isLoadingParteners || isLoadingTeamMembers ? <div style={{width:'100vw', height:'100vh', display:'flex', justifyContent:'center', alignItems:'center'}}><Spinner animation="border" variant="primary" /> </div> :
 
-                <ComponentSlider
-                    items={TeamMembersData}
-                    title={'Team Members'}
-                    renderItem={(item) => <TeamMemberCard
-                        name={item.name}
-                        email={item.email}
-                        phoneNumber={item.phoneNumber}
-                        image={item.image}
-                        role={item.role}
-                        description={item.description}
-                    />}
-                />
-            </Container>
+                <>
+                    <HeroSection
+                        ButtonCaption={ButtonCaption}
+                        ButtonIsVisible
+                        ButtonUrl={ButtonUrl}
+                        Caption={Caption}
+                        HeroImage={HeroImage}
 
-            <Container>
-                <GridPagination
-                    title={'Partners'}
-                    items={PartnersData}
-                    itemsPerPage={3}
-                    renderItem={(item) => <PartnerCard partner={item}/>}
-                    seeMoreUrl={'/partners'}
-                  
-                />
+                        HeroImageIsVisible
+                    />
+                    <CoreValuesSection
+                        values={CoreValuesData}
+                    />
+                    <Container>
 
-            </Container>
+                        <ComponentSlider
+                            items={teamMembersData}
+                            title={'Team Members'}
+                            renderItem={(item) => <TeamMemberCard
+                                name={item.name}
+                                email={item.email}
+                                phoneNumber={item.phoneNumber}
+                                image={item.image}
+                                role={item.role}
+                                description={item.description}
+                            />}
+                        />
+                    </Container>
+
+                    <Container>
+                        <GridPagination
+                            title={'Partners'}
+                            items={partnersData}
+                            itemsPerPage={3}
+                            renderItem={(item) => <PartnerCard partner={item} />}
+                            seeMoreUrl={'/partners'}
+
+                        />
+
+                    </Container>
+                </>
+            }
+
+
+
         </>
     );
 }

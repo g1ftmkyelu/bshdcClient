@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/timeline-items';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/timeline-items';
 
 // Fetch all timeline items
 export const useFetchAllTimelineItems = () => {
-  return useQuery('timelineItems', async () => {
+  return useQuery(['timelineItems'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });

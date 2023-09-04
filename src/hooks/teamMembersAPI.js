@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
-const BASE_URL = 'http://localhost:7070/api/team-members';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/team-members';
 
 // Fetch all team members
 export const useFetchAllTeamMembers = () => {
-  return useQuery('teamMembers', async () => {
+  return useQuery(['teamMembers'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });

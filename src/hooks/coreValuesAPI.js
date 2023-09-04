@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/core-values';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/core-values';
 
 // Fetch all core values
 export const useFetchAllCoreValues = () => {

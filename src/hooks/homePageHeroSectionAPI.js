@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/hero-section';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/hero-section';
 
 // Fetch all hero sections
 export const useFetchAllHomePageHeroSections = () => {
-  return useQuery('homePageHeroSections', async () => {
+  return useQuery(['homePageHeroSections'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });

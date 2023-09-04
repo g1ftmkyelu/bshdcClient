@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/website-navigation-links';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/website-navigation-links';
 
 // Fetch all website navigation links
 export const useFetchAllWebsiteNavigationLinks = () => {
-  return useQuery('websiteNavigationLinks', async () => {
+  return useQuery(['websiteNavigationLinks'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });

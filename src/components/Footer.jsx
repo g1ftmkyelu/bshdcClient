@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 
 const Footer = ({ Links, SociaMediaLinks, details }) => {
     return (
@@ -25,7 +26,7 @@ const Footer = ({ Links, SociaMediaLinks, details }) => {
 
                                 <ListGroup.Item className='bg-dark border-0' key={i}>
                                     <Link className='text-decoration-none' to={url}>
-                                        <Icon />{Caption}
+                                        <Image src={Icon} width={20} height={20}/>  {Caption}
                                     </Link>
                                 </ListGroup.Item>
                             ))}

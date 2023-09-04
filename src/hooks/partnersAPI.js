@@ -2,11 +2,11 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:7070/api/partners';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/partners';
 
 // Fetch all partners
 export const useFetchAllPartners = () => {
-  return useQuery('partners', async () => {
+  return useQuery(['partners'], async () => {
     const { data } = await axios.get(BASE_URL);
     return data;
   });
