@@ -18,11 +18,14 @@ function HeroSection({ Caption, HeroImage, ButtonIsVisible, ButtonUrl, ButtonCap
         <Container fluid style={{
             backgroundImage: HeroImage !== undefined ? `url(${HeroImage})` : 'none',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
         }}>
             <Row style={Styles.Row} className="align-items-center justify-content-center">
                 <Col md={8} className="text-center">
-                    <h1 className="text-white">
+                    <h1 className="text-white display-2 fw-bolder"
+                    style={{textShadow: "1px 1px 0px #000000"}}
+                    >
                         {Caption}
                     </h1>
 

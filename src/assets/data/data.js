@@ -10,8 +10,8 @@ import { FaHeart, FaLeaf, FaHandshakeAngle, FaFacebook, FaTwitter, FaLinkedin } 
 
 export const WebContactDetails = {
 
-  postalAddress: "Post Office Box 2345, Blantyre",
-  location: "Henry Henderson Institute",
+  postalAddress: "Box 413 Blantyre",
+  location: "",
   phone: "+265 992 4168",
   email: "info@bshdc.com",
 

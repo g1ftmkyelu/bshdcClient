@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { WebsiteUI, PaymentUI, AdminUI } from './UI';
-import { Home, Contact, About, Login, History, PaymentCancel, PaymentSuccess, Partners, Team, Events, NotFound } from './pages';
+import { Home, Contact, About, Login, History, PaymentCancel, PaymentSuccess, Partners, Team, Events, Event, NotFound } from './pages';
 
 
 
@@ -21,7 +21,7 @@ function AppRouter() {
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/events" element={<Events />} />
-
+                <Route path="/events/:id" element={<Event />} />
             </Route>
 
             <Route path="/admin" element={<AdminUI/>}/>

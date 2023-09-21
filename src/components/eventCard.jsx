@@ -9,7 +9,7 @@ const sanitizeHTML = (html) => {
 };
 
 function EventCard({ event }) {
-    const { title, author, thumbnail, createdAt } = event;
+    const { _id,title, author, thumbnail, createdAt } = event;
   
     // Truncate the content field (for example, first 100 characters)
     const truncatedContent = event.content.substring(0, 100) + '...';
@@ -20,7 +20,7 @@ function EventCard({ event }) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{sanitizeHTML(truncatedContent)}</Card.Text>
-          <Button variant="primary">View</Button>
+          <Button variant="primary" role='link' href={`/events/${_id}`}>View</Button>
           <Card.Footer>
             <small className="text-muted">Author: {author}</small>
             <br />

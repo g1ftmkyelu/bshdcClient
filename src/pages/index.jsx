@@ -9,6 +9,7 @@ import PaymentCancel from "./PaymentCancel";
 import Partners from "./partners";
 import Team from "./Team"
 import Events from "./events";
+import Event from "./event";
 
 
 export{
@@ -22,5 +23,6 @@ export{
     PaymentCancel,
     Partners,
     Team,
-    Events
+    Events,
+    Event
 }
