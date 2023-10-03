@@ -194,13 +194,14 @@ export const PartnersData = [
 export const ContactFormData = {
   Title: "Contact Us",
   Fields: [
-    { name: 'name', label: 'Name', placeholder: 'Enter your name' },
-    { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter your email' },
-    { name: 'phone', label: 'Phone', type: 'phone', placeholder: 'Enter your phone number' },
-    { name: 'message', label: 'Message', type: 'text', placeholder: 'Enter your message' },
+    { name: 'name', label: 'Name', placeholder: 'Enter your name', type: 'text' },
+    { name: 'email', label: 'Email', placeholder: 'Enter your email', type: 'email' },
+    { name: 'phone', label: 'Phone', placeholder: 'Enter your phone number', type: 'tel' }, // Use 'tel' type for phone
+    { name: 'message', label: 'Message', placeholder: 'Enter your message', type: 'textarea' }, // Use 'textarea' type for a multiline input
   ],
   ButtonText: "Send"
 }
+
 
 
 

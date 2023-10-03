@@ -13,6 +13,10 @@ function EventCard({ event }) {
   
     // Truncate the content field (for example, first 100 characters)
     const truncatedContent = event.content.substring(0, 100) + '...';
+    const formatDate = (dateString) => {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString(undefined, options);
+  };
   
     return (
       <Card>
@@ -24,7 +28,7 @@ function EventCard({ event }) {
           <Card.Footer>
             <small className="text-muted">Author: {author}</small>
             <br />
-            <small className="text-muted">Created At: {new Date(createdAt).toLocaleDateString()}</small>
+            <small className="text-muted">Created At: {formatDate(createdAt)}</small>
           </Card.Footer>
         </Card.Body>
       </Card>

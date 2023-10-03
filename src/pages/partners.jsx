@@ -22,9 +22,22 @@ export default function Partners() {
                         HeroImage={'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'}
                         HeroImageIsVisible
                     />
+
+                    {/* Description Section */}
+                    <section style={{ background: '#f7f7f7', padding: '20px 0' }}>
+                        <Container>
+                            <h2>Welcome to Our Partners Page</h2>
+                 
+                            <p>
+                                Our partners play a crucial role in helping us achieve our mission and make a positive impact in the community. We value their support and collaboration in our projects and initiatives.
+                            </p>
+                        </Container>
+                    </section>
+                    {/* End of Description Section */}
+
                     <Container>
                         <GridPagination
-                            title={'Partners'}
+                            title={'Our Partners'}
                             items={partnersData}
                             itemsPerPage={6}
                             renderItem={(item) => <PartnerCard partner={item} />}
@@ -33,6 +46,8 @@ export default function Partners() {
 
                     </Container>
 
-                </>}
-        </>)
+                </>
+            }
+        </>
+    )
 }

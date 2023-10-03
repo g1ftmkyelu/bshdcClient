@@ -14,7 +14,6 @@ const Styles = {
 
 function HeroSection({ Caption, HeroImage, ButtonIsVisible, ButtonUrl, ButtonCaption }) {
     return (
-
         <Container fluid style={{
             backgroundImage: HeroImage !== undefined ? `url(${HeroImage})` : 'none',
             backgroundRepeat: 'no-repeat',

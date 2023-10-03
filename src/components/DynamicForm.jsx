@@ -20,14 +20,25 @@ const DynamicForm = ({ title, buttonText, formFields, onSubmit }) => {
           {formFields.map((field, index) => (
             <Form.Group key={index} controlId={field.name}>
               <Form.Label>{field.label}</Form.Label>
-              <Form.Control
-                type={field.type || 'text'}
-                placeholder={field.placeholder}
-                {...register(field.name, {
-                  required: `${field.label} is required`,
-                  // Add more validation rules here (e.g., minLength, pattern)
-                })}
-              />
+              {field.type === 'textarea' ? (
+                <Form.Control
+                  as="textarea"
+                  placeholder={field.placeholder}
+                  {...register(field.name, {
+                    required: `${field.label} is required`,
+                    // Add more validation rules here (e.g., minLength, pattern)
+                  })}
+                />
+              ) : (
+                <Form.Control
+                  type={field.type || 'text'}
+                  placeholder={field.placeholder}
+                  {...register(field.name, {
+                    required: `${field.label} is required`,
+                    // Add more validation rules here (e.g., minLength, pattern)
+                  })}
+                />
+              )}
               {errors[field.name] && (
                 <Form.Text className="text-danger">
                   {errors[field.name].message}
@@ -36,7 +47,7 @@ const DynamicForm = ({ title, buttonText, formFields, onSubmit }) => {
             </Form.Group>
           ))}
 
-          <Button type="submit" className='my-2' variant="primary">
+          <Button type="submit" className="my-2" variant="primary">
             {buttonText} <BsArrowRight className="ml-2" />
           </Button>
         </Form>
