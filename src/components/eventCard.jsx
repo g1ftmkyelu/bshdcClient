@@ -20,7 +20,7 @@ function EventCard({ event }) {
   
     return (
       <Card>
-        <Card.Img variant="top" src={thumbnail} alt={title} />
+        <Card.Img variant="top" src={thumbnail} loading='lazy' alt={title} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{sanitizeHTML(truncatedContent)}</Card.Text>

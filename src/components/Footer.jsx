@@ -37,8 +37,7 @@ const Footer = ({ Links, SociaMediaLinks, details }) => {
                         <p>{details.postalAddress}</p>
                         <p>{details.location}</p>
                         <p>{details.phone}</p>
-                        <p>{details.postalAddress}</p>
-
+                       
                     </Col>
                 </Row>
             </Container>

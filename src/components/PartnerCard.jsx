@@ -23,6 +23,7 @@ const PartnerCard = ({ partner }) => {
         src={partner.image}
         alt={partner.name}
         style={{ width: '200px', height: '200px' }}
+        loading='lazy'
       />
       <Card.Body>
         <Card.Title>{partner.name}</Card.Title>

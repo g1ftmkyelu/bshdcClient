@@ -28,7 +28,7 @@ function TeamMemberCard({ image, name, role, phoneNumber, email, description }) 
 
         <Container>
             <BootstrapCard className='mx-auto my-4' style={{ width: '18rem', border: 'none', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
-                {image && <Image variant="top" src={image}  width={288} height={346}/>}
+                {image && <Image variant="top" src={image} loading='lazy' width={288} height={346}/>}
                 <BootstrapCard.Body>
                     <BootstrapCard.Title className="text-center">{name}</BootstrapCard.Title>
                     <BootstrapCard.Subtitle className="mb-2 text-muted text-center">{role}</BootstrapCard.Subtitle>

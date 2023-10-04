@@ -19,7 +19,7 @@ function CoreValuesSection({values}) {
 
                         <Col lg={4} md={6} sm={12} className="d-flex justify-content-center align-items-center mt-4">
                             <div className="text-center mx-3">
-                                <h3 className="text-primary"><Image src={Icon} width={100} height={100} /></h3>
+                                <h3 className="text-primary"><Image src={Icon} width={100} height={100} loading='lazy' /></h3>
                                 <h3 className="text-justify text-primary aos-init aos-animate">
                                     {Title}
                                 </h3>

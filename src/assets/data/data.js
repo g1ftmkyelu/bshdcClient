@@ -21,13 +21,11 @@ export const WebContactDetails = {
 
 
 export const WebsiteNavigationLinks = [
-  { Caption: 'Home', url: '/' },
-  {Caption:'Events', url: '/events' },
-  { Caption: 'History', url: '/history' },
-  { Caption: 'Contact Us', url: '/contact' },
-  { Caption: 'About', url: '/about' },
-  { Caption: 'Team', url: '/team'},
-  { Caption:'Partners', url: '/partners'}
+  {Caption:'Our Events', url: '/events' },
+  { Caption: 'Our History', url: '/history' },
+  { Caption: 'Our Team', url: '/team'},
+  { Caption:'Our Partners', url: '/partners'},
+  { Caption: 'About Us', url: '/about' },
 ]
 
 

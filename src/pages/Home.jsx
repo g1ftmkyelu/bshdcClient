@@ -14,6 +14,8 @@ import { useFetchAllPartners } from '../hooks/partnersAPI';
 import { useFetchAllCoreValues } from '../hooks/coreValuesAPI';
 import { useFetchAllEvents } from '../hooks/eventsAPI';
 import { Container, Spinner } from 'react-bootstrap';
+import Contact from './Contact';
+import DonateSect from './DonateSect';
 
 const Home = () => {
     const { ButtonCaption, Caption, ButtonUrl, HeroImage } = HomePageHeroSectionData
@@ -40,6 +42,8 @@ const Home = () => {
                     <CoreValuesSection
                         values={coreValuesData}
                     />
+
+                    <DonateSect/>
                     <Container>
 
                         <ComponentSlider
@@ -56,6 +60,8 @@ const Home = () => {
                         />
                     </Container>
 
+      
+
                     <Container>
                         <GridPagination
                             title={'Partners'}
@@ -67,6 +73,8 @@ const Home = () => {
                         />
 
                     </Container>
+
+                    <Contact/>
 
                     <Container>
 
