@@ -24,6 +24,7 @@ export const useFetchmessageById = (id) => {
 export const useAddmessage = () => {
   return useMutation(async (newmessage) => {
     const { data } = await axios.post(BASE_URL, newmessage);
+    console.log(newmessage)
     return data;
   });
 };

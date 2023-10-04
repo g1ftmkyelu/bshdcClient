@@ -1,6 +1,6 @@
 import React from 'react';
 import { DynamicForm, HeroSection } from '../components';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import { ContactFormData } from '../assets/data/data';
 import { useAddmessage } from '../hooks/messageAPI';
 import Swal from 'sweetalert2';
@@ -62,7 +62,7 @@ const Contact = () => {
                 Caption={'contact us'}
             />
             {addMessageMutation.isLoading
-                ? <div>Loading...</div>
+                ? <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Spinner animation="border" variant="primary" /> </div> 
                 :
                 <Container className='py-lg-5'>
                     <DynamicForm
