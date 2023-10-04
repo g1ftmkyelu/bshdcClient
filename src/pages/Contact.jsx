@@ -54,7 +54,6 @@ const Contact = () => {
         }
     };
 
-
     return (
         <>
             <HeroSection
