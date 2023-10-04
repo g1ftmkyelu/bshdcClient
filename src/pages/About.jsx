@@ -47,7 +47,7 @@ const About = () => {
             </p>
            
               {/* You can map through TeamMembersData and use the TeamMemberCard component here */}
-              <Button variant="primary" role='link' href='/team'>View Team</Button>
+              <a href="/team" className='btn btn-outline-primary'>View Team Members</a>
          
 
             <h2>Partnerships</h2>
@@ -56,7 +56,7 @@ const About = () => {
             </p>
           
               {/* You can map through PartnersData and use the PartnerCard component here */}
-              <Button variant="primary" role='link' href='/partners'>View Partners</Button>
+              <a href="/partners" className='btn btn-outline-primary'>View Partners</a>
           
           </Col>
 
