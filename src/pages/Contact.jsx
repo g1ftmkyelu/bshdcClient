@@ -15,7 +15,7 @@ const Contact = () => {
                 <DynamicForm
                     title={Title}
                     formFields={Fields}
-                    buttonText={ButtonText}
+                    buttonText={ButtonText}                    
                     onSubmit={()=>alert('submited')}
                 
                 />
