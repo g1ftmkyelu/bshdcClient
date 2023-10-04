@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'https://bshdc-admin.onrender.com/api/messages';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/message';
 
 // Fetch all messages
 export const useFetchAllmessages = () => {
