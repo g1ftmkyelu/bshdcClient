@@ -71,7 +71,8 @@ const Home = () => {
                             title={'Partners'}
                             items={partnersData}
                             itemsPerPage={3}
-                            renderItem={(item) => <PartnerCard partner={item} />}
+                            renderItem={(item) => <PartnerCard data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom" partner={item} />}
                             seeMoreUrl={'/partners'}
 
                         />
