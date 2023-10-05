@@ -5,11 +5,12 @@ import Home from "./Home";
 import Login from "./Login";
 import NotFound from "./NotFound";
 import PaymentSuccess from "./PaymentSuccess";
-import PaymentCancel from "./PaymentCancel";
+import PaymentCancel from "./PaymentFailiure";
 import Partners from "./partners";
 import Team from "./Team"
 import Events from "./events";
 import Event from "./event";
+import Donate from "./Donate";
 
 
 export{
@@ -24,5 +25,6 @@ export{
     Partners,
     Team,
     Events,
-    Event
+    Event,
+    Donate
 }

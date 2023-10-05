@@ -43,8 +43,9 @@ const Home = () => {
                         values={coreValuesData}
                     />
 
-                    <DonateSect/>
-                    <Container>
+                    <DonateSect />
+                    <Container data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
 
                         <ComponentSlider
                             items={teamMembersData}
@@ -56,13 +57,16 @@ const Home = () => {
                                 image={item.image}
                                 role={item.role}
                                 description={item.description}
+                                data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom"
                             />}
                         />
                     </Container>
 
-      
 
-                    <Container>
+
+                    <Container data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
                         <GridPagination
                             title={'Partners'}
                             items={partnersData}
@@ -74,14 +78,15 @@ const Home = () => {
 
                     </Container>
 
-                    <Contact/>
+                    <Contact />
 
-                    <Container>
+                    <Container data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
 
                         <ComponentSlider
                             items={eventsData}
                             title={'Our Events'}
-                            renderItem={(item) => <EventCard event={item}/>}
+                            renderItem={(item) => <EventCard event={item} />}
                         />
                     </Container>
                 </>

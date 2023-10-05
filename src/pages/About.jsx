@@ -67,7 +67,7 @@ const About = () => {
                 <p>
                   Want to support our cause? There are many ways you can get involved. Whether you want to volunteer, donate, or partner with us, your contribution can make a significant difference in the lives of those we serve.
                 </p>
-                <Button variant="primary">Donate</Button>
+                <Button role='a' href='/donate' >Donate</Button>
               </Card.Body>
             </Card>
 

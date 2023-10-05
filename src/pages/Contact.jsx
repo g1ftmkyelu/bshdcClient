@@ -23,7 +23,7 @@ const Contact = () => {
                     <Container fluid className='h-50 bg-dark-subtle mt-lg-5'>
                         <div className="container col-xxl-8 px-4 py-5">
                             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-                                <div className="col-10 col-sm-8 col-lg-6">
+                                <div data-aos="fade-left" className="col-10 col-sm-8 col-lg-6">
                                     <img
                                         src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29udGFjdCUyMHVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                                         className="d-block mx-lg-auto img-fluid"
@@ -33,7 +33,7 @@ const Contact = () => {
                                         loading="lazy"
                                     ></img>
                                 </div>
-                                <div className="col-lg-6">
+                                <div data-aos="fade-right" className="col-lg-6">
                                     <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Contact Us</h1>
                                     <p className="lead">
                                         Reach Out and Let's Connect! We're Just a Click Away to Answer Your Questions and Assist You in Every Way Possible. Contact Us Today!.
