@@ -11,6 +11,7 @@ import Team from "./Team"
 import Events from "./events";
 import Event from "./event";
 import Donate from "./Donate";
+import Report from "./report";
 
 
 export{
@@ -26,5 +27,6 @@ export{
     Team,
     Events,
     Event,
-    Donate
+    Donate,
+    Report
 }

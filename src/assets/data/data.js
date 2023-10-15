@@ -21,11 +21,12 @@ export const WebContactDetails = {
 
 
 export const WebsiteNavigationLinks = [
-  {Caption:'Our Events  ', url: '/events' },
-  { Caption: 'Our Team  ', url: '/team'},
-  { Caption:'Our Partners  ', url: '/partners'},
+  { Caption: 'Our Events  ', url: '/events' },
+  { Caption: 'Our Team  ', url: '/team' },
+  { Caption: 'Our Partners  ', url: '/partners' },
   { Caption: 'Our History  ', url: '/history' },
   { Caption: 'About Us  ', url: '/about' },
+  { Caption: 'Our Reports ', url: '/reports' }
 ]
 
 
@@ -37,7 +38,7 @@ export const SociaMediaLinks = [
   { Caption: 'Facebook', url: 'https://www.facebook.com', Icon: FaFacebook },
 
   { Caption: 'Twitter', url: 'https://twitter.com', Icon: FaTwitter },
-  
+
   { Caption: 'LinkedIn', url: 'https://www.linkedin.com', Icon: FaLinkedin },
 
 ]
