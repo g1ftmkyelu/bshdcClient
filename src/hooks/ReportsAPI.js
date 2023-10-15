@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 
-const BASE_URL = 'http://localhost:8080/api/reports';
+const BASE_URL = 'https://bshdc-admin.onrender.com/api/reports';
 
 // Fetch all Reports
 export const useFetchAllReports = () => {
