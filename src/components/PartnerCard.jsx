@@ -43,8 +43,8 @@ const PartnerCard = ({ partner }) => {
           ) : (
             <span>
               {/* Render a "Show More" button to open the modal */}
-              <Button onClick={toggleModal} variant="link" >
-                Show More<FaChevronCircleRight/>
+              <Button onClick={toggleModal} variant="link" style={{textDecoration:'none'}} >
+                Show More <FaChevronCircleRight/>
               </Button>
             </span>
           )}
