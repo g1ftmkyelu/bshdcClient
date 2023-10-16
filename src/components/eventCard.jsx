@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { FaChevronCircleRight } from 'react-icons/fa';
 
 const sanitizeHTML = (html) => {
   const temp = document.createElement('div');
@@ -24,7 +25,10 @@ function EventCard({ event }) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{sanitizeHTML(truncatedContent)}</Card.Text>
-          <Button variant="primary" role='link' href={`/events/${_id}`}>View</Button>
+
+
+          <Button variant="link" role='link' href={`/events/${_id}`} style={{ textDecoration: 'none' }}>See More <FaChevronCircleRight/></Button>
+
           <Card.Footer>
             <small className="text-muted">Author: {author}</small>
             <br />

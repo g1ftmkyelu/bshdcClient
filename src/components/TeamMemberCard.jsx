@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card as BootstrapCard, Image, Container, Button, Modal } from 'react-bootstrap';
-import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaChevronCircleRight } from 'react-icons/fa';
 
 function TeamMemberCard({ image, name, role, phoneNumber, email, description }) {
     const [showModal, setShowModal] = useState(false);
@@ -53,8 +53,8 @@ function TeamMemberCard({ image, name, role, phoneNumber, email, description }) 
                         {isDescriptionTruncated ? (
                             <p style={{ textAlign: 'justify' }}>
                                 {sanitizeHTML(truncatedDescription)}{' '}
-                                <Button variant="link" onClick={toggleModal}>
-                                    See More
+                                <Button variant="link" onClick={toggleModal} style={{ textDecoration: 'none' }}>
+                                    See More <FaChevronCircleRight/>
                                 </Button>
                             </p>
                         ) : (

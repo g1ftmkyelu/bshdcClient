@@ -26,9 +26,9 @@ export default function Partners() {
                     {/* Description Section */}
                     <section style={{ background: '#f7f7f7', padding: '20px 0' }}>
                         <Container>
-                            <h2>Welcome to Our Partners Page</h2>
+                            
                  
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 Our partners play a crucial role in helping us achieve our mission and make a positive impact in the community. We value their support and collaboration in our projects and initiatives.
                             </p>
                         </Container>
