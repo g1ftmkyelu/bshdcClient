@@ -22,7 +22,7 @@ const PartnerCard = ({ partner }) => {
         variant="top"
         src={partner.image}
         alt={partner.name}
-        style={{ width: '200px', height: '200px' }}
+        style={{ width: '200px', height: '200px', margin: 'auto' }}
         loading='lazy'
       />
       <Card.Body>
@@ -34,8 +34,7 @@ const PartnerCard = ({ partner }) => {
             <span>
               {showModal ? (
                 <span>
-                  {/* Render the full description in a modal */}
-                  <div dangerouslySetInnerHTML={renderDescription(fullDescription)} />
+                  {/* Full description is shown in the modal */}
                   <Button onClick={toggleModal} variant="link">
                     Show Less
                   </Button>
@@ -62,6 +61,7 @@ const PartnerCard = ({ partner }) => {
           <Modal.Title>{partner.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {/* Full description shown only in the modal */}
           <div dangerouslySetInnerHTML={renderDescription(fullDescription)} />
         </Modal.Body>
         <Modal.Footer>
@@ -71,6 +71,7 @@ const PartnerCard = ({ partner }) => {
         </Modal.Footer>
       </Modal>
     </Card>
+
   );
 };
 
