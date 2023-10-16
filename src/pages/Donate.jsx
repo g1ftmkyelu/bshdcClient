@@ -34,7 +34,7 @@ function Donate() {
             </p>
             <div className="text-center mt-5">
   <Form className="d-flex flex-column align-items-center">
-    <Form.Group controlId="currencySelect" className=" d-flex">
+    <Form.Group controlId="currencySelect" style={{display:'flex'}}>
       <Form.Label>Select Currency:</Form.Label>
       <Form.Control
         as="select"
