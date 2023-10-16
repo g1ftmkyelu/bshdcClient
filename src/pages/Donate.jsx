@@ -42,8 +42,8 @@ function Donate() {
                   ))}
                 </Form.Control>
                 <Form.Control type="number" min="1" step="1" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
-                <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
               </Form>
+                <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
             </div>
             <p className="mt-4">
               Thank you for your support and for being a part of our mission. If you have
