@@ -34,7 +34,7 @@ function Donate() {
             </p>
             <div className="text-center mt-5">
                 <h1>DONATE</h1>
-              <Form className="d-flex align-items-center">
+              <Form className="d-flex align-items-center pb-xxl-5">
                 <Form.Control as="select" className="w-auto mr-2" value={selectedCurrency} onChange={(e) => setSelectedCurrency(e.target.value)}>
                   {currencyOptions.map((currency) => (
                     <option key={currency} value={currency}>
@@ -44,6 +44,8 @@ function Donate() {
                 </Form.Control>
                 <Form.Control type="number" min="1" step="1" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
               </Form>
+
+
                 <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
             </div>
             <p className="mt-4">
