@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import PaymentFailure from "./PaymentFailiure";
 import PaymentSuccess from "./PaymentSuccess";
 
-function PayPalCheckout({ currencyCode, value }) {
+function PayPalCheckout() {
   const paypal = useRef();
   const [transactionStatus, setTransactionStatus] = useState(null);
   const hasEffectRun = useRef(false);
@@ -11,10 +11,8 @@ function PayPalCheckout({ currencyCode, value }) {
     if (!hasEffectRun.current) {
       window.paypal
         .Buttons({
-
           onApprove: async (data, actions) => {
             const order = await actions.order.capture();
-
             console.log("success", order);
             setTransactionStatus("success");
           },
@@ -24,9 +22,10 @@ function PayPalCheckout({ currencyCode, value }) {
           },
         })
         .render(paypal.current);
-      hasEffectRun.current = true; // Set the flag to prevent useEffect from running again
+      
+      hasEffectRun.current = true;
     }
-  }, []); // Specify currencyCode and value as dependencies
+  }, []);
 
   if (transactionStatus === "success") {
     return <PaymentSuccess />;
