@@ -51,12 +51,12 @@ function TeamMemberCard({ image, name, role, phoneNumber, email, description }) 
                     {/* Display truncated and sanitized description */}
                     <BootstrapCard.Text>
                         {isDescriptionTruncated ? (
-                            <>
+                            <p style={{ textAlign: 'justify' }}>
                                 {sanitizeHTML(truncatedDescription)}{' '}
                                 <Button variant="link" onClick={toggleModal}>
                                     See More
                                 </Button>
-                            </>
+                            </p>
                         ) : (
                             sanitizeHTML(description)
                         )}
