@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Modal, Button } from 'react-bootstrap';
+import { FaChevronCircleRight } from 'react-icons/fa';
 
 const PartnerCard = ({ partner }) => {
   const [showModal, setShowModal] = useState(false);
@@ -42,8 +43,8 @@ const PartnerCard = ({ partner }) => {
           ) : (
             <span>
               {/* Render a "Show More" button to open the modal */}
-              <Button onClick={toggleModal} variant="link">
-                Show More
+              <Button onClick={toggleModal} variant="link" >
+                Show More<FaChevronCircleRight/>
               </Button>
             </span>
           )}
