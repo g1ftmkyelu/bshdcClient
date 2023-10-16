@@ -39,7 +39,7 @@ function PayPalCheckout({ currencyCode, value }) {
         .render(paypal.current);
       hasEffectRun.current = true; // Set the flag to prevent useEffect from running again
     }
-  }, [currencyCode, value]); // Specify currencyCode and value as dependencies
+  }, []); // Specify currencyCode and value as dependencies
 
   if (transactionStatus === "success") {
     return <PaymentSuccess />;
