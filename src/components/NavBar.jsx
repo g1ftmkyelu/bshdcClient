@@ -6,7 +6,7 @@ const logoImageUrl = 'https://www.malawiyp.com/img/mw/r/1624560523-97-ccap-blant
 
 function NavBar({ Links }) {
     return (
-        <Navbar bg="white" expand="lg">
+        <Navbar bg="white"  collapseOnSelect expand="sm">
             <Container>
                 <Navbar.Brand href="/">
                     <Image src={logoImageUrl} width={100} height={100} />
