@@ -33,18 +33,38 @@ function Donate() {
               in our journey to create a better world.
             </p>
             <div className="text-center mt-5">
-              <Form className="d-flex align-items-center">
-                <Form.Control as="select" className="w-auto mr-2" value={selectedCurrency} onChange={(e) => setSelectedCurrency(e.target.value)}>
-                  {currencyOptions.map((currency) => (
-                    <option key={currency} value={currency}>
-                      {currency}
-                    </option>
-                  ))}
-                </Form.Control>
-                <Form.Control type="number" min="1" step="1" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
-              </Form>
-                <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
-            </div>
+  <Form className="d-flex flex-column align-items-center">
+    <Form.Group controlId="currencySelect">
+      <Form.Label>Select Currency:</Form.Label>
+      <Form.Control
+        as="select"
+        className="w-auto"
+        value={selectedCurrency}
+        onChange={(e) => setSelectedCurrency(e.target.value)}
+      >
+        {currencyOptions.map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
+      </Form.Control>
+    </Form.Group>
+    
+    <Form.Group controlId="donationAmount">
+      <Form.Label>Donation Amount:</Form.Label>
+      <Form.Control
+        type="number"
+        min="1"
+        step="1"
+        value={donationAmount}
+        onChange={(e) => setDonationAmount(e.target.value)}
+      />
+    </Form.Group>
+
+    <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
+  </Form>
+</div>
+I
             <p className="mt-4">
               Thank you for your support and for being a part of our mission. If you have
               any questions or need assistance, please don't hesitate to{" "}
