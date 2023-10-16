@@ -30,7 +30,7 @@ const About = () => {
 
       <Container className="my-5">
         <Row>
-          <Col lg={8} className="mb-4">
+          <Col style={{textAlign:'justify'}} lg={8} className="mb-4">
             <h2>Who We Are</h2>
             <p>
               Welcome to BSHDC - the health and development arm of the Church of Central African Presbyterian Blantyre. We are dedicated to making a positive impact on the health and well-being of our community. Our mission is to provide healthcare services, education, and support to improve the lives of those in need.
@@ -60,7 +60,7 @@ const About = () => {
           
           </Col>
 
-          <Col lg={4}>
+          <Col style={{textAlign:'justify'}} lg={4}>
             <Card className="mb-4">
               <Card.Body>
                 <h3>Get Involved</h3>

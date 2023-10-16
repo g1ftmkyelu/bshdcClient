@@ -44,7 +44,7 @@ const Contact = () => {
                                             <FiMail /> Email
                                         </a>
                                         {/* Phone call button */}
-                                        <a href={`sms:${contacts[0].phone}`} className="btn btn-outline-secondary btn-lg px-4" aria-label="Call">
+                                        <a href={`tel:${contacts[0].phone}`} className="btn btn-outline-secondary btn-lg px-4" aria-label="Call">
                                             <FiPhone /> Call
                                         </a>
                                         {/* SMS button */}
