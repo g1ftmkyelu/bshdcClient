@@ -70,7 +70,7 @@ function TeamMemberCard({ image, name, role, phoneNumber, email, description }) 
                     <Modal.Title>{name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div dangerouslySetInnerHTML={{ __html: description }} />
+                    <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: description }} />
                 </Modal.Body>
             </Modal>
         </Container>
