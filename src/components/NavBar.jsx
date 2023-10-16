@@ -21,6 +21,9 @@ function NavBar({ Links }) {
                             </Link>
                         ))}
                     </Nav>
+                    <Nav>
+                        <Button role='a' href='/donate' >Donate</Button>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
 
