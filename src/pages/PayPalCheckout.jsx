@@ -11,20 +11,7 @@ function PayPalCheckout({ currencyCode, value }) {
     if (!hasEffectRun.current) {
       window.paypal
         .Buttons({
-          createOrder: (data, actions, err) => {
-            return actions.order.create({
-              intent: "CAPTURE",
-              purchase_units: [
-                {
-                  description: "BSHDC Donation",
-                  amount: {
-                    currency_code: currencyCode, // Use props for currency code
-                    value: value, // Use props for value
-                  },
-                },
-              ],
-            });
-          },
+
           onApprove: async (data, actions) => {
             const order = await actions.order.capture();
 
