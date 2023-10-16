@@ -4,8 +4,8 @@ import PayPalCheckout from "./PayPalCheckout";
 import { HeroSection } from "../components";
 
 function Donate() {
-  const [selectedCurrency, setSelectedCurrency] = useState("USD");
-  const [donationAmount, setDonationAmount] = useState(10);
+  const [selectedCurrency, setSelectedCurrency] = useState("MWK");
+  const [donationAmount, setDonationAmount] = useState(1000);
 
   const currencyOptions = ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "MWK"]; // Add "MWK" for Malawi Kwacha
 
@@ -33,38 +33,19 @@ function Donate() {
               in our journey to create a better world.
             </p>
             <div className="text-center mt-5">
-  <Form className="d-flex flex-column align-items-center">
-    <Form.Group controlId="currencySelect" style={{display:'flex', alignItems:'center'}}>
-      <Form.Label>Select Currency:</Form.Label>
-      <Form.Control
-        as="select"
-        className="w-auto"
-        value={selectedCurrency}
-        onChange={(e) => setSelectedCurrency(e.target.value)}
-      >
-        {currencyOptions.map((currency) => (
-          <option key={currency} value={currency}>
-            {currency}
-          </option>
-        ))}
-      </Form.Control>
-    </Form.Group>
-    
-    <Form.Group controlId="donationAmount" style={{display:'flex', alignItems:'center'}}>
-      <Form.Label>Donation Amount:</Form.Label>
-      <Form.Control
-        type="number"
-        min="1"
-        step="1"
-        value={donationAmount}
-        onChange={(e) => setDonationAmount(e.target.value)}
-      />
-    </Form.Group>
-
-    <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
-  </Form>
-</div>
-I
+                <h1>DONATE</h1>
+              <Form className="d-flex align-items-center">
+                <Form.Control as="select" className="w-auto mr-2" value={selectedCurrency} onChange={(e) => setSelectedCurrency(e.target.value)}>
+                  {currencyOptions.map((currency) => (
+                    <option key={currency} value={currency}>
+                      {currency}
+                    </option>
+                  ))}
+                </Form.Control>
+                <Form.Control type="number" min="1" step="1" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} />
+              </Form>
+                <PayPalCheckout currencyCode={selectedCurrency} value={donationAmount} />
+            </div>
             <p className="mt-4">
               Thank you for your support and for being a part of our mission. If you have
               any questions or need assistance, please don't hesitate to{" "}
